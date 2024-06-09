@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +7,285 @@
     <link rel="icon" href="imagenes/Xbox_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
     <div class="navbar">
+        <div id="searchBar" class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar en xbox.com">
+                <img class="search-icon" src="https://img.icons8.com/windows/32/search--v1.png" alt="search">
+            </div>
+            <button type="button" onclick="closeSearchBar()">Cancelar</button>
+        </div>
         <div class="navbarleft">
-            <a href="https://www.microsoft.com/es-co/"><img class="microsoft" src="imagenes/Microsoft.png" alt=""></a>
-            <div class="palito" ></div>
-            <a href="https://www.xbox.com/es-CO/?xr=mebarnav"><img class="microsoft" src="imagenes/Xbox.png" alt=""></a>
-            <button type="button" class="button_navbar"> Game Pass ˅ </button>
-            <button type="button" class="button_navbar"> Juegos ˅ </button>
-            <button type="button" class="button_navbar"> Dispositivos ˅ </button>
-            <button type="button" class="button_navbar"> Tienda ˅ </button>
-            <button type="button" class="button_navbar"> Comunidad ˅ </button>
-            <button type="button" class="button_navbar"> Soporte técnico ˅ </button>
-            <button type="button" class="button_navbar"> Mi Xbox ˅ </button>
-            <button type="button" class="button_navbar"> Desarrolladores ˅ </button> 
+            <a href="https://www.microsoft.com/es-co/"><img class="microsoft" src="imagenes/Microsoft.png" alt="Microsoft"></a>
+            <div class="palito"></div>
+            <a href="https://www.xbox.com/es-CO/?xr=mebarnav"><img class="xbox" src="imagenes/Xbox.png" alt="Xbox"></a>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="toggleDropdown('gamePassDropdown')">
+                    <span class="text">Game Pass</span>
+                    <img width="10" height="10" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand arrow"/>
+                </button>
+                <div id="gamePassDropdown" class="dropdown-content">
+                    <a href="#">Únete a Game Pass</a>
+                    <a href="#">Explorar juegos</a>
+                    <a href="#">Game Pass Ultimate</a>
+                    <a href="#">PC Game Pass</a>
+                    <a href="#">Game Pass Core</a>
+                    <a href="#">Ofertas con Game Pass</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="toggleDropdown('juegosDropdown')">
+                    <span class="text">Juegos</span>
+                    <img width="10" height="10" style="margin-left: 2px;" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand arrow"/>
+                </button>
+                <div id="juegosDropdown" class="dropdown-content">
+                    <a href="#">Página principal de juegos</a>
+                    <a href="#">Explora todos los juegos para consola</a>
+                    <a href="#">Explora todos los juegos de PC</a>
+                    <a href="#">Juegos gratuitos</a>
+                    <a href="#">Juegos optimizados</a>
+                    <a href="#">Juegos con compatibilidad con versiones anteriores</a>
+                    <a href="#">Ofertas y especiales</a>
+                    <a href="#">Canjear código</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="toggleDropdown('dispositivosDropdown')">
+                    <span class="text">Dispositivos</span>
+                    <img width="10" height="10" style="margin-left: 2px;" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand arrow"/>
+                </button>
+                <div id="dispositivosDropdown" class="dropdown-content">
+                    <div class="dispositivos">
+                        <div>
+                            <a href="#"><strong>Consolas</strong></a>
+                            <a href="#">Xbox Consolas</a>
+                            <a href="#">Xbox Series X</a>
+                            <a href="#">Xbox Series S</a>
+                            <a href="#">Comprar todas las consolas</a>
+                            <a href="#">Dónde comprar</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>Accesorios</strong></a>
+                            <a href="#">Comprar todos los accesorios</a>
+                            <a href="#">Controles</a>
+                            <a href="#">Audífonos</a>
+                            <a href="#">Discos duros y almacenamiento</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="toggleDropdown('tiendaDropdown')">
+                    <span class="text">Tienda</span>
+                    <img width="10" height="10" style="margin-left: 2px;" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand arrow"/>
+                </button>
+                <div id="tiendaDropdown" class="dropdown-content">
+                    <a href="#">Comprar juegos</a>
+                    <a href="#">Comprar Game Pass</a>
+                    <a href="#">Comprar consolas</a>
+                    <a href="#">Comprar accesorios</a>
+                    <a href="#">Ofertas de compra</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="toggleDropdown('comunidadDropdown')">
+                    <span class="text">Comunidad</span>
+                    <img width="10" height="10" style="margin-left: 2px;" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand arrow"/>
+                </button>
+                <div id="comunidadDropdown" class="dropdown-content">
+                    <div class="dispositivos">
+                        <div>
+                            <a href="#"><strong>Comunidad</strong></a>
+                            <a href="#">FanFest</a>
+                            <a href="#">Noticias de Xbox</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>Para todas las edades</strong></a>
+                            <a href="#">Nuestra filosofía</a>
+                            <a href="#">Centro para la familia</a>
+                            <a href="#">Juegos accesibles</a>
+                            <a href="#">Estándares de la comunidad</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>Apps y entretenimiento</strong></a>
+                            <a href="#">App Xbox para dispositivos móviles</a>
+                            <a href="#">App Xbox para PC Windows</a>
+                            <a href="#">App móvil Xbox Game Pass</a>
+                            <a href="#">App Xbox Family Settings</a>
+                            <a href="#">Apps para entretenimiento en la consola</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="toggleDropdown('soporteDropdown')">
+                    <span class="text">Más</span>
+                    <img width="10" height="10" style="margin-left: 2px;" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand arrow"/>
+                </button>
+                <div id="soporteDropdown" class="dropdown-content">
+                    <a href="#">Soporte técnico<img width="10" height="10" style="margin-left: 10px;" src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"/></a>
+                    <a href="#">Mi Xbox<img width="10" height="10" style="margin-left: 45px;" src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"/></a>
+                    <a href="#">Desarrolladores<img width="10" height="10" style="margin-left: 10px;" src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"/></a>
+                </div>
+            </div>
         </div>
-        
         <div class="navbarright">
-            <button type="button" class="button_navbar"> Todo Microsoft ˅ </button>
-            <button type="button" class="button_navbar"> Buscar <img width="17" height="17" style="margin-left: 6px;" src="https://img.icons8.com/windows/32/search--v1.png" alt="search--v1"/></button>
-            <button type="button" class="button_navbar"> Carro <img width="15" height="15" src="https://img.icons8.com/ios/50/shopping-cart--v1.png" alt="shopping-cart--v1"/> </button>
-            <button type="button" class="button_navbar"> Iniciar Sesión <img width="17" height="17" style="margin-left: 6px;" src="imagenes/user.png" alt="search--v1"> </button>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="toggleDropdown('todoMicrosoftDropdown')">
+                    <span class="text">Todo Microsoft</span>
+                    <img width="10" height="10" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand arrow"/>
+                </button>
+                <div id="todoMicrosoftDropdown" class="dropdown-content todo_microsoft_dropdown">
+                    <div class="todo_microsoft">
+                        <a href="#">Microsoft 365</a>
+                        <a href="#">Teams</a>
+                        <a href="#">Copilot</a>
+                        <a href="#">Windows</a>
+                        <a href="#">Xbox</a>
+                        <a href="#">Soporte</a>
+                    </div>
+                    <div class="espacio_microsoft"></div>
+                    <div class="todo_microsoft2  todo_microsoft_dropdown_below">
+                        <div>
+                            <a href="#"><strong>Software</strong></a>
+                            <a href="#">Aplicaciones para Windows</a>
+                            <a href="#">Inteligencia artificial</a>
+                            <a href="#">OneDrive</a>
+                            <a href="#">Outlook</a>
+                            <a href="#">Skype</a>
+                            <a href="#">OneNote</a>
+                            <a href="#">Microsoft Teams</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>PCs & Devices</strong></a>
+                            <a href="#">Comprar Xbox</a>
+                            <a href="#">Accesorios</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>Entertainment</strong></a>
+                            <a href="#">Xbox Game Pass Ultimate</a>
+                            <a href="#">Xbox Live Gold</a>
+                            <a href="#">Xbox y juegos</a>
+                            <a href="#">Juegos para PC</a>
+                            <a href="#">Juegos para Windows</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>Empresas</strong></a>
+                            <a href="#">Microsoft Cloud</a>
+                            <a href="#">Seguridad de Microsoft</a>
+                            <a href="#">Azure</a>
+                            <a href="#">Dynamics 365</a>
+                            <a href="#">Microsoft 365 para empresas</a>
+                            <a href="#">Microsoft Manufactura</a>
+                            <a href="#">Microsoft Power Platform</a>
+                            <a href="#">Windows 365</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>Desarrollador y TI</strong></a>
+                            <a href="#">Centro de desarrolladores</a>
+                            <a href="#">Documentación</a>
+                            <a href="#">Microsoft Learn</a>
+                            <a href="#">Comunidad de Microsoft Tech</a>
+                            <a href="#">Marketplace de Azure</a>
+                            <a href="#">AppSource</a>
+                            <a href="#">Visual Studio</a>
+                        </div>
+                        <div>
+                            <a href="#"><strong>Otros</strong></a>
+                            <a href="#">Seguridad y descargas gratuitas</a>
+                            <a href="#">Educación</a>
+                            <a href="#">Tarjetas de regalo</a>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="button_navbar" onclick="openSearchBar()">
+                    <span class="text">Buscar</span>
+                    <img width="17" height="17" src="https://img.icons8.com/windows/32/search--v1.png" alt="search"/>
+                </button>
+            </div>            
+            <button type="button" class="button_carro">
+                <span class="text">Carro</span>
+                <img width="15" height="15" src="https://img.icons8.com/ios/50/shopping-cart--v1.png" alt="shopping cart"/>
+            </button>
+            <button type="button" class="button_sesion">
+                <span class="text">Iniciar Sesión</span>
+                <img width="24" height="24" class="icono_sesion" src="imagenes/user.png" alt="user icon"/>
+            </button>
         </div>
-        
     </div>
+    <div style="position: relative; margin-top: -4px;">
+        <img src="imagenes/hero-xbox.jpg" height="530px" width="100%" alt="">
+        <div class="letter-img">
+            <div class="consola">CONSOLA · PC</div>
+            <div class="saga">Senua's Saga: Hellblade II</div>
+            <div class="disponible">Ahora disponible con PC Game Pass o Ultimate</div>
+            <button type="button" onclick="button_consigue()" class="button_consigue">CONSÍGUELO AHORA <img width="13" height="13" src="https://img.icons8.com/ios-filled/50/chevron-right.png" alt="chevron-right"/></button>
+        </div>
+    </div>  
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            var searchBar = document.getElementById('searchBar');
+            var buttons = document.querySelectorAll('.button_navbar');
+            var dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(function(drop) {
+                if (drop.id !== id) {
+                    drop.style.display = 'none';
+                }
+            });
+            buttons.forEach(function(button) {
+                if (button.getAttribute('onclick').includes(id)) {
+                    button.classList.toggle('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            if (searchBar.style.display === 'block') {
+                searchBar.style.display = 'none';
+            }
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        }
+        window.addEventListener('click', function(event) {
+            if (!event.target.closest('.button_navbar')) {
+                var dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(function(dropdown) {
+                    dropdown.style.display = 'none';
+                });
+                var buttons = document.querySelectorAll('.button_navbar');
+                buttons.forEach(function(button) {
+                    button.classList.remove('active');
+                });
+            }
+        });
+        function openSearchBar() {
+            var dropdowns = document.querySelectorAll('.dropdown-content');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.style.display = 'none';
+            });
+
+            var buttons = document.querySelectorAll('.button_navbar');
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            var searchBar = document.getElementById('searchBar');
+            searchBar.style.display = 'flex';
+            var searchInput = document.getElementById('searchInput');
+            searchInput.disabled = false;
+            searchInput.focus();
+        }
+        function closeSearchBar() {
+            var searchBar = document.getElementById('searchBar');
+            searchBar.style.display = 'none';
+        }
+        function button_consigue() {
+            window.location.href = 'https://www.xbox.com/es-CO/games/senuas-saga-hellblade-ii';
+        } 
+    </script>
 </body>
 </html>

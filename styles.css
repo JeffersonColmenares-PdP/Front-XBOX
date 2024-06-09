@@ -1,58 +1,287 @@
-.navbar {
-    background-color: red;
-    width: 100%;
-    height: 6%;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-}
-/*quitar margen al body hace que nav var llegue al borde de la pagina*/
 body {
     margin: 0;
+    padding-top: 60px;
 }
-/*estilo inicial para los botones de navbar*/
+
+.navbar {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 .button_navbar {
     background-color: transparent;
     text-decoration: none;
     position: relative;
     border: none;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: -3px;
 }
-/*accion posterior a pasar el mouse sobre los botones de navbar linea inferior*/
-.button_navbar::after {
+
+.button_navbar .text {
+    position: relative;
+}
+
+.button_navbar .text::after {
     content: '';
     background-color: black;
     width: 100%;
     height: 1px;
     position: absolute;
-    bottom: 15px;
+    bottom: -1px;
     left: 0;
     visibility: hidden;
 }
-/*reconoce cuando se pasa el puntero sobre los botones de nava var*/
-.button_navbar:hover:after {
+
+.button_navbar:hover .text::after {
     visibility: visible;
 }
 
-.navbarleft .microsoft {
-    height: 50%;
+.microsoft, .xbox {
+    height: 25px;
     width: auto;
-    margin-top: 8px;
+    margin: 0 15px;
 }
 
-.navbarleft .palito {
+.palito {
     border-left: 2px solid black;
     background-color: transparent;
-    width: 0%;
+    height: 24px;
+    margin: 0 15px;
+}
+
+.navbarleft, .navbarright {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.button_sesion {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    margin-right: 10px;
+}
+
+.icono_sesion {
+    width: 24px;
+    height: 24px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    min-width: 185px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: -1px;
+    padding: 10px;
+}
+
+.dropdown-content-izquierdo {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    min-width: 185px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: -1px;
+    padding: 10px;
+    left: -185px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.show {
+    display: block;
+}
+
+.button_navbar.active {
+    background-color: #f2f2f2;
+}
+
+.dispositivos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo_microsoft_dropdown {
+    left: 100px;
+}
+
+.dropdown-content .todo_microsoft {
+    display: flex;
+    justify-content: left;
+    background-color: #f2f2f2;
+    min-width: 1200px;
+}
+
+.espacio_microsoft {
+    background-color: transparent;
+    height: 150px;
+    border-bottom: 2px solid #6d6d6d;
+    position: relative;
+    width: calc(100% + 20px);
+    left: -10px;
+    margin: 0;
+    padding: 0;
+}
+
+.todo_microsoft2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo_microsoft_dropdown_below {
+    margin-top: 10px;
+}
+
+.button_carro {
+    border: none;
+    background-color: transparent;
+}
+
+.search-bar {
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 165px;
+    width: calc(100% - 165px);
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 1002;
+    padding: 10px;
+}
+
+
+.search-container {
+    position: relative;
+    flex: 1;
+}
+
+.search-bar input[type="text"] {
+    width: 1020px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    font-size: 14px;
+    background-color: white;
+    margin-left: 30px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 220px;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    margin-left: 1060px;
+    transform: translateY(-50%);
+}
+
+.letter-img {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.consola {
+    font-size: 14px;
+    background-color: #ffd800;
+    padding: 4px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 100px;
+    text-align: center;
+    margin-left: 300px;
+}
+
+.saga {
+    background-color: transparent;
+    margin-top: -150px;
+    margin-left: 300px;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 210px;
+    left: 100px;
+    width: 450px;
+}
+
+.disponible {
+    background-color: transparent;
+    margin-top: 30px;
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 450px;
+    margin-left: 300px;
+}
+
+.button_consigue {
+    background-color: #9bf00b;
+    color: #054b16;
+    font-size: 16px;
+    font-weight: bold;
+    font-weight: 800;
+    width: 250px;
     height: 30px;
-    margin-top: 8px;
+    margin-top: 350px;
+    margin-left: 400px;
+    border: none;
 }
 
-.navbarleft {
-    display: flex;
-    align-items: center;
-}
-
-.navbarright {
-    display: flex;
-    align-items: center;
+.button_consigue:hover {
+    text-decoration: underline;
 }
