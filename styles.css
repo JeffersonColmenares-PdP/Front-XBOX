@@ -282,6 +282,550 @@ body {
     border: none;
 }
 
-.button_consigue:hover {
+.button_consigue:hover, .botones-game:hover, .ver-juegos:hover, .canjear-regalo:hover{
     text-decoration: underline;
+}
+
+.ofertas-iconos {
+    width: 500px;
+    height: 100px;
+    margin-left: 550px;
+}
+
+.ofertas-compras, .canjear-codigo, .lista-deseos {
+    display: inline-block;
+    width: 100px;
+    white-space: normal;
+    text-align: center;
+    padding: 5px;
+    color: #107C10;
+    text-decoration: none;
+}
+
+.ofertas-compras:hover , .canjear-codigo:hover, .lista-deseos:hover, .explorar-todo:hover, .explorar-juegos:hover, .comprar-ahora:hover {
+    text-decoration: underline;
+}
+
+.explorar {
+    display: flex; 
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 45px; 
+    margin-top: 20px;
+}
+
+.nuevos-la {
+    margin-left: 45px;
+    font-size: 25px;
+    font-weight: bold; 
+    margin-top: 15px;
+}
+
+.explorar-todo {
+    display: flex;
+    color: #107C10;
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 15px; 
+    margin-top: 20px;
+}
+
+.aling-nuevos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.explorar-juegos {
+    display: flex;
+    color: #107C10;
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 15px; 
+    margin-top: 20px;
+    margin-right: 60px;
+}
+
+.imagenes-lanzamientos {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 35px;
+    width: 92%;
+}
+
+.lanzamiento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    font-weight: bold;
+}
+
+.contenido-sport {
+    display: flex;
+    justify-content: left;
+}
+
+.ofertas-div {
+    background-color: #e6e6e6;
+    width: 350px;
+    height: 350px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.comprar-ahora {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.container-sport {
+    position: relative;
+    margin-top: 5px;
+}
+
+.image-sport {
+    width: 703px;
+    height: 794px;
+    margin-left: 10px;
+}
+
+.text-block-sport {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    color: black;
+    text-align: left;
+    padding: 10px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.text-block-sport div {
+    margin-bottom: 20px;
+}
+
+.ea-sport {
+    font-size: 40px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.reverva {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.reverva:hover, .reverva2:hover, .consiguelo-ahora:hover, .explorar-todo2:hover  {
+    text-decoration: underline;
+}
+
+.container-new {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin-top: -449px;
+    margin-right: 5px;
+}
+
+.text-block-worl{
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.llega-sobr {
+    margin-right: 452px;
+    margin-top: 30px;
+}
+
+.reverva2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 565px;
+    margin-top: 30px;
+}
+
+.container-gamepa {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 10;
+    left: 0;
+    margin-top: -415px;
+    padding: 5px;
+}
+
+.juega-game {
+    background-color: #e6e6e6;
+    width: 340px;
+    height: 400px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.tit-game {
+    font-size: 14px;
+    background-color: #ffd800;
+    padding: 4px;
+    font-weight: bold;
+    top: 20px;
+    left: 100px;
+    width: 170px;
+    text-align: center;
+    margin-left: -90px;
+}
+
+.octo-titulo {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: -21px;
+    font-weight: bold;
+}
+
+.consiguelo-ahora {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: -86px;
+}
+
+.explorar2 {
+    position: absolute;
+    display: flex; 
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 45px; 
+    margin-top: 20px;
+}
+
+.compra-juegos {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 300px;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.lanzamiento2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-weight: bold;
+}
+
+.lanzamiento2 img {
+    align-self: center;
+}
+
+.explorar-juegos {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.explorar-juegos img {
+    margin-left: 6px;
+}
+
+.titu-gamepass {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: #107C10;
+    position: relative;
+    margin-top: 450px;
+}
+
+.menos-game {
+    margin-top: -25px; 
+    position: absolute;
+    margin-left: 650px;
+}
+
+.explorar-todo2 {
+    display: flex;
+    position: absolute;
+    color: #107C10;
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 15px; 
+    margin-top: 90px;
+    margin-left: 647px;
+}
+
+.disfruta {
+    position: absolute; 
+    font-size: 20px;
+    margin-left: 545px; 
+    margin-top: 50px;
+}
+
+.botones-juegos {
+    display: flex;
+    position: relative;
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+    font-size: 18px;
+}
+
+.ju-consola {
+    border: 2px solid black;
+    height: 30px;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-underline-offset: 2px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.play-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contener-video{
+    position: absolute;
+    margin-top: -420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.game-pass-ico {
+    margin-left: 570px;
+}
+
+.disfruta-cient {
+    margin-left: -470px;
+    margin-top: 100px;
+    font-size: 18px;
+    color: white;
+}
+
+.botones-game {
+    display: flex;
+    align-content: baseline;
+    position: relative;
+    margin-left: -570px;
+    margin-top: 190px;
+    gap: 50px;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+
+.imagenes-xs {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.imagen-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 618px;
+    margin: 0;
+}
+
+.imagen-texto {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.imagen-texto2 {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.ver-juegos {
+    display: flex;
+    color: #107C10;
+    font-weight: bold; 
+    font-size: 15px; 
+    margin-top: 20px;
+}
+
+
+.container-regalo {
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 600px;
+    width: 89%;
+    margin-left: 65px;
+    gap: 20px;
+    height: 100px;
+}
+
+.container-regalo > div {
+    display: flex;
+    align-items: center;
+}
+
+.recibe-tarjeta {
+    font-size: 20px; 
+    font-weight: bold; 
+    width: 700px;
+    margin-left: 70px;
+}
+
+.qr-regalo {
+    margin-right: -20px;
+    margin-left: 230px;
+}
+
+.canjear-regalo {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: -20px;
+}
+
+.tipos-juegos {
+    display: flex;
+    justify-content: space-between;
+    width: 89%;
+    margin-left: 65px;
+    margin-top: 80px;
+}
+
+.lanzamiento2 img:hover {
+    filter: brightness(108%);
+}
+
+.sigue-xbox {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    width: 80%;
+    margin-left: 60px;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.footer {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.examinar, .recursos, .microsoft-store, .desarrolladores-para {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.recursos > div, .examinar > div, .microsoft-store > div, .desarrolladores-para > div {
+    margin-bottom: 10px;
+}
+
+.examinar > div:not(:has(strong)):hover,
+.recursos > div:not(:has(strong)):hover,
+.microsoft-store > div:not(:has(strong)):hover,
+.desarrolladores-para > div:not(:has(strong)):hover {
+    text-decoration: underline;
+}
+
+.firma {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    background-color: #f2f2f2;
+}
+
+.firma-texto {
+    display: flex;
+    align-items: center;
+    margin-left: 45px;
+}
+
+.firma-texto > div:hover, .firma-texto2 > div:hover {
+    text-decoration: underline;
+}
+
+.firma2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+    gap: 10px;
+    background-color: #f2f2f2;
+}
+
+.firma-texto2 div {
+    margin-right: 20px;
+}
+
+.firma-texto2 {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+    margin-top: -35px;
 }
