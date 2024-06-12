@@ -378,6 +378,14 @@ body {
     text-align: left;
 }
 
+.ofertas-div:hover{
+    background-color: darksalmon;
+}
+
+.selectorFuente {
+    display: none;
+}
+
 .comprar-ahora {
     font-weight: bold;
     font-size: 15px;
@@ -828,4 +836,134 @@ body {
     align-items: center;
     margin-right: 45px;
     margin-top: -35px;
+}
+
+
+
+
+/* ESTILOS PARA CAROUSEL */
+.imagenes-carrusel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    }
+
+.carrusel-item {
+    display: none;
+    width: 100%;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.controles {
+    display: flex;
+    gap: 20px;
+    margin-top: 230px;
+    margin-left: 42%;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicador {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicador.activo {
+    background-color: black;
+}
+
+.letter-img-carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-163%, -64%);
+    text-align: left;
+}
+
+.letter-img-carousel2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, -65%);
+    text-align: left;
+}
+
+.saga-carousel {
+    background-color: transparent;
+    font-size: 94px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 91px;
+    left: 400px;
+}
+
+.saga-carousel2{
+    background-color: transparent;
+    font-size: 94px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 70px;
+    left: 400px;
+}
+
+.disponible-carousel {
+    background-color: transparent;
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    top: 200px;
+    width: 640px;
+    margin-left: 403px;
+}
+
+.disponible-carousel2{
+    background-color: transparent;
+    font-size: 35px;
+    color: black;
+    position: absolute;
+    top: 299px;
+    width: 500px;
+    margin-left: 401px;
+}
+
+.button_consigue2{
+    background-color: #9bf00b;
+    color: #054b16;
+    font-size: 16px;
+    font-weight: 800;
+    width: 250px;
+    height: 30px;
+    margin-top: 400px;
+    margin-left: 398px;
+    border: none;
+}
+
+#elemento {
+    width: 600px;
+    height: 70px;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    left: 400px;
 }

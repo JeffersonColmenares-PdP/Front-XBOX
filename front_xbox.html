@@ -218,21 +218,61 @@
             </button>
         </div>
     </div>
-    <div style="position: relative; margin-top: -4px;">
-        <img src="imagenes/hero-xbox.jpg" height="530px" width="100%" alt="">
-        <div class="letter-img">
-            <div class="consola">CONSOLA · PC</div>
-            <div class="saga">Senua's Saga: Hellblade II</div>
-            <div class="disponible">Ahora disponible con PC Game Pass o Ultimate</div>
-            <button type="button" onclick="button_consigue()" class="button_consigue">CONSÍGUELO AHORA <img width="13" height="13" src="https://img.icons8.com/ios-filled/50/chevron-right.png" alt="chevron-right"/></button>
+
+
+
+    <!-- Imagenes para carousel -->
+    <div class="imagenes-carrusel">
+        <div class="carrusel-item">
+            <img class="imagen-carrusel" src="imagenes/Valorant.jpg" alt="">
+            <div class="letter-img-carousel">
+                <div class="consola">CONSOLA · PC</div>
+                <div class="saga-carousel">VALORANT</div>
+                <div class="disponible-carousel">Desbloquea todos los agentes con Game Pass. Inscríbite a la versión beta cerrada ahora.</div>
+                <button type="button" class="button_consigue">VER MÁS INFORMACIÓN</button>
+            </div>
         </div>
+        <div class="carrusel-item">
+            <img class="imagen-carrusel" src="imagenes/dusborn.jpg" alt="">
+            <div class="letter-img-carousel2">
+                <div class="consola">CONSOLA · PC</div>
+                <div class="saga-carousel">DUSTBORN</div>
+                <div class="disponible-carousel">Adéntrate en un peligroso viaje por carretera</div>
+                <button type="button" class="button_consigue">RESERVAR</button>
+            </div>
+        </div>
+        <div class="carrusel-item">
+            <img class="imagen-carrusel" src="imagenes/metaphor.jpg" alt="">
+            <div class="letter-img-carousel">
+                <div class="consola">CONSOLA · PC</div>
+                <div class="saga-carousel2">Metapthor ReFantazio</div>
+                <div class="disponible-carousel2">Enfréntate a tus miedos, retráctate mañana.</div>
+                <button type="button" class="button_consigue2">RESERVAR</button>
+            </div>
+        </div>
+    </div>
+    <!-- Botones del carousel -->
+    <div class="controles">
+        <button id="btnAnterior">Anterior</button>
+        <button id="btnPausar">Pausar</button>
+        <button id="btnSiguiente">Siguiente</button>
+    </div>
+    <!-- Indicadores (Puntos) -->
+    <div class="indicadores" id="indicadores"></div>
+    <!-- ###################################################################################### -->
+
+
+
+    <div style="position: relative; margin-top: -4px;">
+        
         <div class="ofertas-iconos">
             <a href="" class="ofertas-compras"><img  width="50" height="50" src="https://img.icons8.com/ios/50/40C057/update-tag.png" alt="update-tag"/>OFERTAS DE COMPRA</a>
             <a href="" class="canjear-codigo"><img width="50" height="50" src="https://img.icons8.com/pixels/32/40C057/qr-code.png" alt="qr-code"/>CANJEAR CÓDIGO</a>
             <a href="" class="lista-deseos"><img width="58" height="58" src="https://img.icons8.com/ios/50/40C057/heart-plus.png" alt="heart-plus"/>LISTA DE DESEOS</a>
         </div>
     </div>
-    <div class="explorar">Explorar los juegos Xbox</div>
+    <div id="texto_a_cambiar" class="explorar" >Explorar los juegos Xbox</div>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
     <div class="explorar-todo">EXPLORA TODOS LOS JUEGOS <img width="18" height="18" style="margin-left: 8px;" src="https://img.icons8.com/ios-filled/50/40C057/chevron-right.png" alt="chevron-right"/></div>
     <div class="aling-nuevos">
         <div class="nuevos-la">Nuevos lanzamientos</div>
@@ -289,9 +329,14 @@
         </div>
         <div class="ofertas-div">
             <div><strong>Ofertas desbloqueadas​</strong></div>
-            <div style="width: 200px; margin-top: 20px;">Ahorra hasta un 40 % en una selección de juegos Xbox​</div>
+            <div id="parrafo-oferta" style="width: 200px; margin-top: 20px;">Ahorra hasta un 40 % en una selección de juegos Xbox​</div>
             <div class="comprar-ahora">COMPRAR AHORA<img width="13" height="13" src="https://img.icons8.com/ios-glyphs/30/chevron-right.png" alt="chevron-right"/></div>
         </div>
+        <select id="selectorFuente" class="selectorFuente" onchange="cambiarFuente()">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+        </select>
         <img style="padding: 5px;" width="350" height="350" src="imagenes/sportsmo.png" alt="">
     </div>
     <div class="container-new">
@@ -311,7 +356,15 @@
             <div class="consiguelo-ahora">CONSÍGUELO AHORA<img width="13" height="13" src="https://img.icons8.com/ios-glyphs/30/chevron-right.png" alt="chevron-right"/></div>
         </div>
     </div>
-    <div class="explorar">Compra juegos por género</div>
+    
+    <div id="elemento" class="explorar">Compra juegos por género</div>
+    <div class="botones">
+        <button onclick="mover('arriba')">Arriba</button>
+        <button onclick="mover('abajo')">Abajo</button>
+        <button onclick="mover('izquierda')">Izquierda</button>
+        <button onclick="mover('derecha')">Derecha</button>
+    </div>
+    
     <div class="compra-juegos">
         <div class="lanzamiento2">
             <img width="270" height="150" src="imagenes/aventura.JPG" alt="">
@@ -462,6 +515,9 @@
         <img width="28" height="28" src="https://img.icons8.com/material-outlined/24/1A1A1A/tiktok.png" alt="tiktok"/>
         <img width="28" height="28" src="https://img.icons8.com/ios-glyphs/30/1A1A1A/youtube-play.png" alt="youtube-play"/>
     </div>
+
+    <button id="btnOcultar" style="margin-top: 20px; margin-left: 55px; background-color: #9bf00b; width: 100px; font-weight: bold; height: 28px;" onclick="mostrar_ocultar()">Ocultar</button>
+
     <div class="footer">
         <div class="examinar">
             <div style="color: #616161;"><strong>Examinar</strong></div>
@@ -489,6 +545,15 @@
             <div style="color: #616161;"><strong>Para desarrolladores</strong></div>
             <div>Juegos</div>
         </div>
+
+
+        <button onclick="agregarItem()">Agregar Ítem</button>
+        <ul id="lista-desarrolladores">
+            <li>Para desarrolladores</li>
+            <li>Juegos</li>
+        </ul>
+
+
     </div>
     <div class="firma">
         <div class="firma-texto">
@@ -578,6 +643,179 @@
                 this.style.display = 'none';
             }
         });
+        function cambiarTexto() {
+            var nuevoTexto = prompt("Digite el nuevo texto.")
+            if (nuevoTexto !== null) {
+                document.getElementById("texto_a_cambiar").innerText = nuevoTexto;
+            }
+        }
+        /*evento doble click al div parrafo-oferta */
+        document.getElementById('parrafo-oferta').addEventListener('dblclick', function() {
+            var seleccionaFuente = document.getElementById('selectorFuente');
+            seleccionaFuente.style.display = 'block';
+        });
+        /*funcion para cambiar la fuente del parrafo-oferta*/
+        function cambiarFuente() {
+            var parrafo = document.getElementById('parrafo-oferta');
+            var seleccionaFuente = document.getElementById('selectorFuente')
+            var fuenteSeleccionada = seleccionaFuente.value;
+            parrafo.style.fontFamily = fuenteSeleccionada;
+            seleccionaFuente.style.display = 'none';
+        }
+        
+
+
+
+        // FUNCIONES PARA EL CAROUSEL
+        // Variable para almacenar el índice de la imagen actual en el carrusel
+        let currentIndex = 0;
+        // Selecciona todos los elementos con la clase 'carrusel-item' que representan cada imagen del carrusel
+        const items = document.querySelectorAll('.carrusel-item');
+        // Obtiene la referencia al botón "Anterior" del carrusel por su ID
+        const btnAnterior = document.getElementById('btnAnterior');
+        // Obtiene la referencia al botón "Siguiente" del carrusel por su ID
+        const btnSiguiente = document.getElementById('btnSiguiente');
+        // Obtiene la referencia al botón "Pausar/Reanudar" del carrusel por su ID
+        const btnPausar = document.getElementById('btnPausar');
+        // Obtiene el contenedor de los indicadores por su ID
+        const indicadoresContainer = document.getElementById('indicadores');
+        // Declara un array vacío para almacenar los indicadores
+        const indicadores = [];
+        // Crear indicadores
+        // Itera sobre cada elemento en el array 'items' (que son las imágenes del carrusel)
+        items.forEach((item, i) => {
+            // Crea un nuevo elemento 'div' que será un indicador para esta imagen
+            const indicador = document.createElement('div');
+            // Agrega la clase 'indicador' al nuevo elemento, para darle estilo como un punto de indicador
+            indicador.classList.add('indicador');
+            // Si este es el primer indicador (es decir, la primera imagen), añádele la clase 'activo'
+            if (i === 0) {
+                indicador.classList.add('activo');
+            }
+            // Agrega un event listener para el clic en el indicador
+            indicador.addEventListener('click', () => {
+                // Cuando se haga clic en el indicador, establece el índice actual al índice de esta imagen
+                currentIndex = i;
+                // Llama a la función 'mostrarActual()' para mostrar la imagen correspondiente al índice actual
+                mostrarActual();
+                // Llama a la función 'pausarCarrusel()' para detener el carrusel cuando se hace clic en un indicador
+                pausarCarrusel();
+            });
+            // Agrega este indicador al array 'indicadores' para un seguimiento posterior
+            indicadores.push(indicador);
+            // Agrega el indicador recién creado al contenedor de indicadores en la página HTML
+            indicadoresContainer.appendChild(indicador);
+        });
+        // Función para mostrar la imagen actual del carrusel y actualizar los indicadores
+        function mostrarActual() {
+            // Itera sobre cada elemento del array 'items', que son las imágenes del carrusel
+            items.forEach((item, i) => {
+                // Si el índice del elemento es igual al índice de la imagen actual (currentIndex),
+                // muestra ese elemento cambiando su estilo de visualización a 'block' y marca su indicador como activo
+                if (i === currentIndex) {
+                    item.style.display = 'block';
+                    indicadores[i].classList.add('activo');
+                } else {
+                    // Si el índice no coincide con el de la imagen actual, oculta ese elemento cambiando su estilo de visualización a 'none'
+                    // y elimina la clase 'activo' de su indicador correspondiente para desactivarlo
+                    item.style.display = 'none';
+                    indicadores[i].classList.remove('activo');
+                }
+            });
+        }
+        // Función para mostrar la siguiente imagen del carrusel
+        function mostrarSiguiente() {
+            currentIndex = (currentIndex + 1) % items.length;
+            mostrarActual();
+        }
+        // Función para mostrar la imagen anterior del carrusel
+        function mostrarAnterior() {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            mostrarActual();
+        }
+        // Función para reanudar el carrusel
+        function reanudarCarrusel() {
+            intervalId = setInterval(mostrarSiguiente, 3000);
+        }
+        // Función para detener el carrusel
+        function pausarCarrusel() {
+            clearInterval(intervalId);
+        }
+        // Event listener para el botón "Siguiente"
+        btnSiguiente.addEventListener('click', () => {
+            mostrarSiguiente();
+            pausarCarrusel();
+        });
+        // Event listener para el botón "Anterior"
+        btnAnterior.addEventListener('click', () => {
+            mostrarAnterior();
+            pausarCarrusel();
+        });
+        // Event listener para el botón "Pausar/Reanudar"
+        btnPausar.addEventListener('click', () => {
+            if (btnPausar.textContent === 'Pausar') {
+                pausarCarrusel();
+                btnPausar.textContent = 'Reanudar';
+            } else {
+                reanudarCarrusel();
+                btnPausar.textContent = 'Pausar';
+            }
+        });
+        // Mostrar la primera imagen al cargar la página
+        mostrarActual();
+        // Iniciar el carrusel automáticamente
+        reanudarCarrusel();
+
+        //Mostrar/Ocultar Elementos
+        const divsOcultar = document.querySelectorAll('.sigue-xbox');
+        const btnOcultar = document.getElementById('btnOcultar');
+
+        btnOcultar.addEventListener('click', () => {
+            if (btnOcultar.textContent === 'Ocultar') {
+                btnOcultar.textContent = 'Mostrar';
+            } else {
+                btnOcultar.textContent = 'Ocultar';
+            }
+            divsOcultar.forEach(div => {
+                // Comprobar si el estilo de visualización es 'flex'
+                if (div.style.display === 'flex' || div.style.display === '') {
+                    // Si es 'flex', ocultar el elemento cambiando su estilo de visualización a 'none'
+                    div.style.display = 'none';
+                } else {
+                    // Si no es 'flex', mostrar el elemento cambiando su estilo de visualización a 'flex'
+                    div.style.display = 'flex';
+                }
+            });
+        });
+
+        function mover(direccion) {
+            var elemento = document.getElementById('elemento');
+            var paso = 20; // Cambia esto según qué tan lejos quieras mover el elemento
+
+            // Obtenemos las propiedades de estilo calculadas
+            var estilos = getComputedStyle(elemento);
+            var top = parseInt(estilos.top);
+            var left = parseInt(estilos.left);
+
+            switch(direccion) {
+                case 'arriba':
+                    elemento.style.top = (top - paso) + 'px';
+                    break;
+                case 'abajo':
+                    elemento.style.top = (top + paso) + 'px';
+                    break;
+                case 'izquierda':
+                    elemento.style.left = (left - paso) + 'px';
+                    break;
+                case 'derecha':
+                    elemento.style.left = (left + paso) + 'px';
+                    break;
+            }
+        }
+
+
+
+
     </script>
 </body>
 </html>
