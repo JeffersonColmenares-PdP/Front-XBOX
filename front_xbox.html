@@ -666,6 +666,35 @@
 
 
 
+        function agregarItem() {
+            var nuevoTexto = prompt("Ingrese el texto del nuevo ítem:");
+            if (nuevoTexto !== null && nuevoTexto.trim() !== "") {
+                var lista = document.getElementById("lista-desarrolladores");
+                var nuevoItem = document.createElement("li");
+                nuevoItem.appendChild(document.createTextNode(nuevoTexto));
+                nuevoItem.onclick = function() {
+                    eliminarItem(nuevoItem);
+                };
+                lista.appendChild(nuevoItem);
+            }
+        }
+
+        function eliminarItem(item) {
+            if (confirm("¿Está seguro de que desea eliminar este ítem?")) {
+                item.parentNode.removeChild(item);
+            }
+        }
+
+        // Asignar evento onclick a los elementos de la lista inicial
+        document.querySelectorAll('#lista-desarrolladores li').forEach(function(item) {
+            item.onclick = function() {
+                eliminarItem(item);
+            };
+        });
+
+
+
+
         // FUNCIONES PARA EL CAROUSEL
         // Variable para almacenar el índice de la imagen actual en el carrusel
         let currentIndex = 0;
